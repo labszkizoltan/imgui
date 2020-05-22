@@ -1999,7 +1999,8 @@ struct ImGuiTableColumnSettings
     ImS8    DisplayOrder;
     ImS8    SortOrder;
     ImU8    SortDirection : 2;
-    ImU8    Visible : 1;
+    ImU8    IsVisible : 1;
+    ImU8    IsWeighted : 1;
 
     ImGuiTableColumnSettings()
     {
@@ -2008,7 +2009,8 @@ struct ImGuiTableColumnSettings
         Index = -1;
         DisplayOrder = SortOrder = -1;
         SortDirection = ImGuiSortDirection_None;
-        Visible = 1;
+        IsVisible = 1;
+        IsWeighted = 0;
     }
 };
 
